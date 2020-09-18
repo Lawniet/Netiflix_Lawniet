@@ -98,14 +98,13 @@
     <!-- Adaptação para obtenção externa de dados: JSON -->
     <script>
       var myfilm = JSON.parse(data_item);
-      $( window ).on( "load", function() {
-        $("#titulo").append(myfilm[0].title);
-         $("#texto").append(myfilm[0].text);
-      });
+
       $( "#fakeTask" ).click(function() {
         alert( "Agendado com sucesso." );
       });
       $(document).ready(function() {
+        $("#titulo").append(myfilm[0].title);
+         $("#texto").append(myfilm[0].text);
         var $j = jQuery.noConflict();
           $j(".trigger").on('click', function(){
               $j("#emBreve").show();  
