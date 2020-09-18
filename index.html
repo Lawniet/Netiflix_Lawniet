@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--responsividade-->
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!--owl css-->
+    <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl/owl.theme.default.min.css">
+    <script type="text/javascript" src="application/data_item.json"></script>
+    <title>LAWNIETFLIX</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h2 class="logo">LAWNIETFLIX</h2>
+            <nav>
+                <a href="#" >Inicio</a>
+                <a href="#emBreve" class="trigger">Séries</a>
+                <a href="#emBreve" class="trigger">Filmes</a>
+                <a href="#emBreve" class="trigger">Documentários</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="filme-principal">
+            <div class="container">
+                <h3 class="titulo" id="titulo"></h3>
+                <p class="descricao" id="texto"></p>
+                <div class="botoes">
+                    <button role="button" class="botao">
+                        <i class="fas fa-play"></i>
+                        ASSISTIR AGORA
+                    </button>
+                    <button role="button" class="botao">
+                        <i class="fas fa-info-circle"></i>
+                        MAIS INFORMAÇÕES
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="carrosel-filmes">
+      <div class="owl-carousel owl-theme">
+              <div class="item">
+                  <img class="box-filme" src="img/mini1.jpg" alt="" srcset="" id="mini1" title="" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini2.jpg" alt="" srcset="" id="mini2" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini3.jpg" alt="" srcset="" id="mini3" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini4.jpg" alt="" srcset="" id="mini4" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini5.jpg" alt="" srcset="" id="mini5" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini6.jpg" alt="" srcset="" id="mini6" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini7.jpg" alt="" srcset="" id="mini7" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini8.jpg" alt="" srcset="" id="mini8" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini9.jpg" alt="" srcset="" id="mini9" title="">
+              </div>
+              <div class="item">
+                  <img class="box-filme" src="img/mini10.jpg" alt="" srcset="" id="mini10" title="">
+              </div>
+            </div>
+        </div>                           
+    <div id="emBreve" style="display:none;">
+      <div class="container">
+          <h3 class="titulo"> Em breve</h3><br>
+          <p class="descricao" id="texto">Filme, série ou documentário não disponível no momento. Faça um agendamento no botão abaixo para ser notificado quanto ao lançamento.</p><br>
+              <button role="button" class="botao" id="fakeTask">
+                  <i class="fas fa-info-circle"></i>
+                  Agendar
+              </button>
+          </div>
+      </div>
+    </div>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/setup.js"></script> 
+    <!-- Adaptação para obtenção externa de dados: JSON -->
+    <script>
+      var myfilm = JSON.parse(data_item);
+      $( window ).on( "load", function() {
+        $("#titulo").append(myfilm[0].title);
+         $("#texto").append(myfilm[0].text);
+      });
+      $( "#fakeTask" ).click(function() {
+        alert( "Agendado com sucesso." );
+      });
+      $(document).ready(function() {
+        var $j = jQuery.noConflict();
+          $j(".trigger").on('click', function(){
+              $j("#emBreve").show();  
+        });
+      });
+    </script>
+</body>
+</html>
