@@ -1,7 +1,7 @@
 # Sobre este repositório
 
 Repositório de material desenvolvido no Bootcamp "JavaScript Game Developer", ofertado pela [Digital Innovation One](https://web.digitalinnovation.one/). 
-Foi elaborado para o #DioLabs "Recriando a Interface do Netflix" ministrado por [Felipe Aguiar](https://github.com/felipeAguiarCode). 
+Foi elaborado para o #DioLabs "Recriando a Interface do Netflix" ministrado por [Felipe Aguiar](https://www.linkedin.com/in/felipe-aguiar-047/). 
 A partir dos conceitos aprendidos nesta Lab, foram implementados os conceitos abordados.
  
 ## Descrição do projeto: Recriando a Interface do Netflix
